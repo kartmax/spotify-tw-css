@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind utilities;
+
+.grid-cols-custom-main {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.grid-playlists {
+    --gap: 20px;
+    display: flex;
+    gap: var(--gap);
+}
+.grid-playlists > * {
+    width: 100%;
+}
+@media only screen and (min-width: 500px) {
+    .grid-playlists > * {
+        width: calc(50% - var(--gap) / 2);
+    }
+}
+@media only screen and (min-width: 900px) {
+    .grid-playlists > * {
+        width: calc(33.33% - var(--gap) / 1.5);
+    }
+}
+@media only screen and (min-width: 1100px) {
+    .grid-playlists > * {
+        width: calc(25% - var(--gap) / 1.33);
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .grid-playlists > * {
+        width: calc(20% - var(--gap) / 1.25);
+    }
+}
+@media only screen and (min-width: 1800px) {
+    .grid-playlists > * {
+        width: calc(14.29% - var(--gap) / 1.16666);
+    }
+}
+@media only screen and (min-width: 2000px) {
+    .grid-playlists > * {
+        width: calc(12.5% - var(--gap) / 1.14285714);
+    }
+}
+@media only screen and (min-width: 2200px) {
+    .grid-playlists > * {
+        width: calc(11.111% - var(--gap) / 1.125);
+    }
+}
